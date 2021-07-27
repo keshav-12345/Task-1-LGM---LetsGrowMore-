@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="" id="life_in_zippy">
+
+    <h2 class="life_heading">Life in Zippy</h2>
+    <div class="heading-underline"></div>
+    
+    <img id=featured style= "height: 30rem;" src="https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-fresh-natural-product-poster-background-image_146684.jpg">
+    <br>
+
+    <div id="slide-wrapper">
+      <img id="slideLeft" class="arrow" src="arrow.png">
+
+      <div id="slider">
+        <img class="thumbnail active" src="">
+        <img class="thumbnail" style="width: 4rem" src="">
+        <img class="thumbnail" src="">
+
+        <img class="thumbnail" src="https://image.shutterstock.com/image-photo/nature-background-table-wood-product-260nw-285662423.jpg">
+        <img class="thumbnail" src="https://image.shutterstock.com/image-photo/nature-background-table-wood-product-260nw-285662423.jpg">
+        <img class="thumbnail" src="">
+        <img class="thumbnail" src="">
+        <img class="thumbnail" src="https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-fresh-natural-product-poster-background-image_146684.jpg">
+        <img class="thumbnail" src="https://image.shutterstock.com/image-photo/nature-background-table-wood-product-260nw-285662423.jpg">
+        <img class="thumbnail" src="">
+        <img class="thumbnail" src="">
+      </div>
+
+      <img id="slideRight" class="arrow" src="">
+    </div>
+
+    <br>
+  </div>
+<script>
+  let thumbnail = document.getElementsByClassName('thumbnail')
+
+let activeImages = document.getElementsByClassName('active')
+
+for (var i=0; i < thumbnail.length; i++){
+
+  thumbnail[i].addEventListener('mouseover', function(){
+    //console.log(activeImages)
+
+    document.getElementById('featured').src = this.src
+  })
+}
+
+
+let buttonRight = document.getElementById('slideRight');
+let buttonLeft = document.getElementById('slideLeft');
+
+buttonLeft.addEventListener('click', function(){
+  document.getElementById('slider').scrollLeft -= 80
+})
+
+buttonRight.addEventListener('click', function(){
+  document.getElementById('slider').scrollLeft += 80
+})
+</script>
+</body>
+</html>
